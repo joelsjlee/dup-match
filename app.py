@@ -9,19 +9,7 @@ number = st.number_input('Change the index from 0 to 1780 see different matches.
 st.write('Index', number)
 with open("full_match.json", "r") as fp:
     matches = json.load(fp)
-
-# fig = go.Figure(data=[go.Table(
-#     header=dict(values=list(dfA.columns),
-#                 fill_color='paleturquoise',
-#                 align='left'),
-#     cells=dict(values=dfA.iloc[[x for x in matches[number]]].transpose().values.tolist(),
-#                fill_color='lavender',
-#                align='left'))
-# ])
-
-# st.write(fig)
-
-st.dataframe(dfA.iloc[[x for x in matches[number]]], width=1500, height=1000)
+st.dataframe(dfA.iloc[[x for x in matches[number]]])
 
 
 
